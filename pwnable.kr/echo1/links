@@ -1,0 +1,3 @@
+download : http://pwnable.kr/bin/echo1
+
+Running at : nc pwnable.kr 9010

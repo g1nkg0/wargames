@@ -1,0 +1,5 @@
+/ (fcn) entry0 6
+|           0x08048054      58             pop eax
+|           0x08048055      5a             pop edx
+|           0x08048056      8b12           mov edx, dword [edx]
+\           0x08048058      ffd2           call edx
