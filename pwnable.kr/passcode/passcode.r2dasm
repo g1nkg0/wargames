@@ -1,0 +1,277 @@
+radare2 disassembly dump of passcode/passcode.c
+
+            ;-- section_end..rel.plt:
+            ;-- section..init:
+╒ (fcn) sym._init 46
+│           ; CALL XREF from 0x080486bc (sym._init)
+│           ; CALL XREF from 0x080483e4 (sym._init)
+│           0x080483e0      53             push ebx                    ; [11] va=0x080483e0 pa=0x000003e0 sz=46 vsz=46 rwx=--r-x .init
+│           0x080483e1      83ec08         esp -= 8
+│           0x080483e4      e800000000     0x80483e9 ()
+│           ; CALL XREF from 0x080483e4 (sym._init)
+│           0x080483e9      5b             pop ebx
+│           0x080483ea      81c30b1c0000   ebx += 0x1c0b
+│           0x080483f0      8b83fcffffff   eax = dword [ebx - 4]
+│           0x080483f6      85c0           if (eax == eax
+│       ┌─< 0x080483f8      7405           isZero 0x80483ff)
+│       │   0x080483fa      e871000000     loc.imp.__gmon_start__ ()
+│       └─> 0x080483ff      e83c010000     sym.frame_dummy ()
+│           0x08048404      e817030000     sym.__do_global_ctors_aux ()
+│           0x08048409      83c408         esp += 8
+│           0x0804840c      5b             pop ebx
+╘           0x0804840d      c3
+╒ (fcn) sym.imp.printf 16
+│       │   ; CALL XREF from 0x08048625 (sym.imp.printf)
+│       │   ; CALL XREF from 0x0804864d (sym.imp.printf)
+│       │   ; CALL XREF from 0x08048572 (sym.imp.printf)
+│       │   ; CALL XREF from 0x080485a0 (sym.imp.printf)
+│       │   0x08048420      ff2500a00408   goto dword [reloc.printf_0] ; "&...6...F...V...f...v..............." @ 0x804a000
+│       │   0x08048426      6800000000     push 0
+╘       └─< 0x0804842b      e9e0ffffff     goto section..plt
+╒ (fcn) sym.imp.fflush 16
+│       │   ; CALL XREF from 0x08048593 (sym.imp.fflush)
+│       │   0x08048430      ff2504a00408   goto dword [reloc.fflush_4] ; "6...F...V...f...v..............." @ 0x804a004
+│       │   0x08048436      6808000000     push 8
+╘       └─< 0x0804843b      e9d0ffffff     goto section..plt
+╒ (fcn) sym.imp.__stack_chk_fail 16
+│       │   0x08048440      ff2508a00408   goto dword [reloc.__stack_chk_fail_8] ; "F...V...f...v..............." @ 0x804a008
+│       │   0x08048446      6810000000     push 0x10
+╘       └─< 0x0804844b      e9c0ffffff     goto section..plt
+╒ (fcn) sym.imp.puts 16
+│       │   ; CALL XREF from 0x08048675 (sym.imp.puts)
+│       │   ; CALL XREF from 0x0804868b (sym.imp.puts)
+│       │   ; CALL XREF from 0x080485c0 (sym.imp.puts)
+│       │   ; CALL XREF from 0x080485f8 (sym.imp.puts)
+│       │   ; CALL XREF from 0x080485de (sym.imp.puts)
+│       │   0x08048450      ff250ca00408   goto dword [reloc.puts_12]  ; "V...f...v..............." @ 0x804a00c
+│       │   0x08048456      6818000000     push 0x18
+╘       └─< 0x0804845b      e9b0ffffff     goto section..plt
+╒ (fcn) sym.imp.system 16
+│       │   ; CALL XREF from 0x080485ea (sym.imp.system)
+│       │   0x08048460      ff2510a00408   goto dword [reloc.system_16] ; "f...v..............." @ 0x804a010
+│       │   0x08048466      6820000000     push 0x20                   ; "T." 0x00000020  ; "T." @ 0x20
+╘       └─< 0x0804846b      e9a0ffffff     goto section..plt
+╒ (fcn) loc.imp.__gmon_start__ 16
+│       │   ; CALL XREF from 0x080483fa (loc.imp.__gmon_start__)
+│       │   0x08048470      ff2514a00408   goto dword [reloc.__gmon_start___20] ; "v..............." @ 0x804a014
+│       │   0x08048476      6828000000     push 0x28                   ; '('
+╘       └─< 0x0804847b      e990ffffff     goto section..plt
+╒ (fcn) sym.imp.exit 16
+│       │   0x08048480      ff2518a00408   goto dword [reloc.exit_24]  ; reloc.exit_24
+│       │   0x08048486      6830000000     push 0x30                   ; '0'
+╘       └─< 0x0804848b      e980ffffff     goto section..plt
+╒ (fcn) sym.imp.__libc_start_main 16
+│       │   ; CALL XREF from 0x080484cc (sym.imp.__libc_start_main)
+│       │   0x08048490      ff251ca00408   goto dword [reloc.__libc_start_main_28] ; reloc.__libc_start_main_28
+│       │   0x08048496      6838000000     push 0x38                   ; '8'
+╘       └─< 0x0804849b      e970ffffff     goto section..plt
+╒ (fcn) sym.imp.__isoc99_scanf 16
+│       │   ; CALL XREF from 0x08048639 (sym.imp.__isoc99_scanf)
+│       │   ; CALL XREF from 0x08048586 (sym.imp.__isoc99_scanf)
+│       │   ; CALL XREF from 0x080485b4 (sym.imp.__isoc99_scanf)
+│       │   0x080484a0      ff2520a00408   goto dword [reloc.__isoc99_scanf_32] ; reloc.__isoc99_scanf_32
+│       │   0x080484a6      6840000000     push 0x40                   ; '@'
+╘       └─< 0x080484ab      e960ffffff     goto section..plt
+            ;-- section_end..plt:
+            ;-- section..text:
+            ;-- _start:
+╒ (fcn) entry0 34
+│           0x080484b0      31ed           ebp = 0                     ; [13] va=0x080484b0 pa=0x000004b0 sz=668 vsz=668 rwx=--r-x .text
+│           0x080484b2      5e             pop esi
+│           0x080484b3      89e1           ecx = esp
+│           0x080484b5      83e4f0         esp &= 0xfffffff0
+│           0x080484b8      50             push eax
+│           0x080484b9      54             push esp
+│           0x080484ba      52             push edx
+│           0x080484bb      6810870408     push sym.__libc_csu_fini ; sym.__libc_csu_fini ; sym.__libc_csu_fini
+│           0x080484c0      68a0860408     push sym.__libc_csu_init ; sym.__libc_csu_init ; "UWVS.i" @ 0x80486a0
+│           0x080484c5      51             push ecx
+│           0x080484c6      56             push esi
+│           0x080484c7      6865860408     push sym.main ; sym.main    ; "U..........$.....................$.........." @ 0x8048665
+│           0x080484cc      e8bfffffff     sym.imp.__libc_start_main ()
+╘           0x080484d1      f4
+╒ (fcn) sym.__do_global_dtors_aux 85
+│           ; CALL XREF from 0x0804875c (sym.__do_global_dtors_aux)
+│           0x080484e0      55             push ebp
+│           0x080484e1      89e5           ebp = esp
+│           0x080484e3      53             push ebx
+│           0x080484e4      83ec04         esp -= 4
+│           ; DATA XREF from 0x0804a030 (sym.__do_global_dtors_aux)
+│           0x080484e7      803d30a00408.  if (byte [obj.completed.6159] == 0
+│       ┌─< 0x080484ee      753f           notZero 0x804852f)
+│       │   ; DATA XREF from 0x0804a034 (sym.__do_global_dtors_aux)
+│       │   0x080484f0      a134a00408     eax = dword [obj.dtor_idx.6161] ; [0x804a034:4]=0x75746e75 LEA obj.dtor_idx.6161 ; "untu/Linaro 4.6.3-1ubuntu5) 4.6.3" @ 0x804a034
+│       │   0x080484f5      bb209f0408     ebx = obj.__DTOR_END__      ; obj.__DTOR_END__
+│       │   0x080484fa      81eb1c9f0408   ebx -= obj.__DTOR_LIST__
+│       │   0x08048500      c1fb02         ebx >>= 2
+│       │   0x08048503      83eb01         ebx -= 1
+│       │   0x08048506      39d8           if (eax == ebx
+│      ┌──< 0x08048508      731e           jae 0x8048528 
+│      ││   0x0804850a      8db600000000   esi = [esi]
+│     ┌───> 0x08048510      83c001         eax += 1
+│     │││   ; DATA XREF from 0x0804a034 (sym.__do_global_dtors_aux)
+│     │││   0x08048513      a334a00408     dword [obj.dtor_idx.6161] = eax ; [0x804a034:4]=0x75746e75 LEA obj.dtor_idx.6161 ; "untu/Linaro 4.6.3-1ubuntu5) 4.6.3" @ 0x804a034
+│     │││   0x08048518      ff14851c9f04.  dword [eax*4 + obj.__DTOR_LIST__] () ; obj.__DTOR_LIST__
+│     │││   ; DATA XREF from 0x0804a034 (sym.__do_global_dtors_aux)
+│     │││   0x0804851f      a134a00408     eax = dword [obj.dtor_idx.6161] ; [0x804a034:4]=0x75746e75 LEA obj.dtor_idx.6161 ; "untu/Linaro 4.6.3-1ubuntu5) 4.6.3" @ 0x804a034
+│     │││   0x08048524      39d8           if (eax == ebx
+│     └───< 0x08048526      72e8           jb 0x8048510 
+│      ││   ; DATA XREF from 0x0804a030 (sym.__do_global_dtors_aux)
+│      └──> 0x08048528      c60530a00408.  byte [obj.completed.6159] = 1 ; [0x804a030:1]=32 LEA obj.completed.6159 ; " (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3" @ 0x804a030
+│       └─> 0x0804852f      83c404         esp += 4
+│           0x08048532      5b             pop ebx
+│           0x08048533      5d             pop ebp
+╘           0x08048534      c3
+╒ (fcn) sym.frame_dummy 35
+│           ; CALL XREF from 0x080483ff (sym.frame_dummy)
+│           0x08048540      55             push ebp
+│           0x08048541      89e5           ebp = esp
+│           0x08048543      83ec18         esp -= 0x18
+│           ; DATA XREF from 0x08049f24 (sym.frame_dummy)
+│           0x08048546      a1249f0408     eax = dword [obj.__JCR_LIST__] ; [0x8049f24:4]=0 LEA obj.__JCR_END__ ; obj.__JCR_END__
+│           0x0804854b      85c0           if (eax == eax
+│       ┌─< 0x0804854d      7412           isZero 0x8048561)
+│       │   0x0804854f      b800000000     eax = 0
+│       │   0x08048554      85c0           if (eax == eax
+│      ┌──< 0x08048556      7409           isZero 0x8048561)
+│      ││   0x08048558      c70424249f04.  dword [esp] = obj.__JCR_LIST__ ; [0x8049f24:4]=0 LEA obj.__JCR_END__ ; obj.__JCR_END__
+│      ││   0x0804855f      ffd0           eax ()
+│      └└─> 0x08048561      c9             
+╘           0x08048562      c3
+╒ (fcn) sym.login 165
+│           ; arg int arg_528e6h   @ ebp+0x528e6
+│           ; arg int arg_cc07c9h  @ ebp+0xcc07c9
+│           ; var int local_ch     @ ebp-0xc
+│           ; var int local_10h    @ ebp-0x10
+│           ; CALL XREF from 0x0804867f (sym.login)
+│           0x08048564      55             push ebp
+│           0x08048565      89e5           ebp = esp
+│           0x08048567      83ec28         esp -= 0x28
+│           0x0804856a      b870870408     eax = str.enter_passcode1_: ; "enter passcode1 : " @ 0x8048770
+│           0x0804856f      890424         dword [esp] = eax
+│           0x08048572      e8a9feffff     sym.imp.printf ()
+│           0x08048577      b883870408     eax = 0x8048783
+│           0x0804857c      8b55f0         edx = dword [ebp - local_10h]
+│           0x0804857f      89542404       dword [esp + 4] = edx
+│           0x08048583      890424         dword [esp] = eax
+│           0x08048586      e815ffffff     sym.imp.__isoc99_scanf ()
+│           ; DATA XREF from 0x0804a02c (sym.login)
+│           0x0804858b      a12ca00408     eax = dword [obj.stdin__GLIBC_2.0] ; [0x804a02c:4]=0x3a434347 LEA loc.__bss_start ; "GCC: (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3" @ 0x804a02c
+│           0x08048590      890424         dword [esp] = eax
+│           0x08048593      e898feffff     sym.imp.fflush ()
+│           0x08048598      b886870408     eax = str.enter_passcode2_: ; "enter passcode2 : " @ 0x8048786
+│           0x0804859d      890424         dword [esp] = eax
+│           0x080485a0      e87bfeffff     sym.imp.printf ()
+│           0x080485a5      b883870408     eax = 0x8048783
+│           0x080485aa      8b55f4         edx = dword [ebp - local_ch]
+│           0x080485ad      89542404       dword [esp + 4] = edx
+│           0x080485b1      890424         dword [esp] = eax
+│           0x080485b4      e8e7feffff     sym.imp.__isoc99_scanf ()
+│           0x080485b9      c70424998704.  dword [esp] = str.checking... ; [0x8048799:4]=0x63656863 LEA str.checking... ; "checking..." @ 0x8048799
+│           0x080485c0      e88bfeffff     sym.imp.puts ()
+│           0x080485c5      817df0e62805.  if (dword [ebp - local_10h] == 0x528e6 ; [0x528e6:4]=-1
+│       ┌─< 0x080485cc      7523           notZero 0x80485f1)
+│       │   0x080485ce      817df4c907cc.  if (dword [ebp - local_ch] == 0xcc07c9 ; [0xcc07c9:4]=-1
+│      ┌──< 0x080485d5      751a           notZero 0x80485f1)
+│      ││   0x080485d7      c70424a58704.  dword [esp] = str.Login_OK_ ; [0x80487a5:4]=0x69676f4c LEA str.Login_OK_ ; "Login OK!" @ 0x80487a5
+│      ││   0x080485de      e86dfeffff     sym.imp.puts ()
+│      ││   0x080485e3      c70424af8704.  dword [esp] = str._bin_cat_flag ; [0x80487af:4]=0x6e69622f LEA str._bin_cat_flag ; "/bin/cat flag" @ 0x80487af
+│      ││   0x080485ea      e871feffff     sym.imp.system ()
+│      ││   0x080485ef      c9             
+│      ││   0x080485f0      c3             
+│      └└─> 0x080485f1      c70424bd8704.  dword [esp] = str.Login_Failed_ ; [0x80487bd:4]=0x69676f4c LEA str.Login_Failed_ ; "Login Failed!" @ 0x80487bd
+│           0x080485f8      e853feffff     sym.imp.puts ()
+│           0x080485fd      c70424000000.  dword [esp] = 0
+╘           0x08048604      e877feffff     sym.imp.exit ()
+            ;-- main:
+╒ (fcn) sym.main 50
+│           ; DATA XREF from 0x080484c7 (sym.main)
+│           0x08048665      55             push ebp
+│           0x08048666      89e5           ebp = esp
+│           0x08048668      83e4f0         esp &= 0xfffffff0
+│           0x0804866b      83ec10         esp -= 0x10
+│           0x0804866e      c70424f08704.  dword [esp] = str.Toddler_s_Secure_Login_System_1.0_beta. ; @ 0x80487f0
+│           0x08048675      e8d6fdffff     sym.imp.puts ()
+│           0x0804867a      e88affffff     sym.welcome ()
+│           0x0804867f      e8e0feffff     sym.login ()
+│           0x08048684      c70424188804.  dword [esp] = str.Now_I_can_safely_trust_you_that_you_have_credential_:_ ; @ 0x8048818
+│           0x0804868b      e8c0fdffff     sym.imp.puts ()
+│           0x08048690      b800000000     eax = 0
+│           0x08048695      c9             
+╘           0x08048696      c3
+ym.__libc_csu_init 97
+│           ; DATA XREF from 0x080484c0 (sym.__libc_csu_init)
+│           0x080486a0      55             push ebp
+│           0x080486a1      57             push edi
+│           0x080486a2      56             push esi
+│           0x080486a3      53             push ebx
+│           0x080486a4      e869000000     sym.__i686.get_pc_thunk.bx ()
+│           0x080486a9      81c34b190000   ebx += 0x194b
+│           0x080486af      83ec1c         esp -= 0x1c
+│           0x080486b2      8b6c2430       ebp = dword [esp + 0x30]    ; [0x30:4]=0x1b001e ; '0'
+│           0x080486b6      8dbb20ffffff   edi = [ebx - 0xe0]
+│           0x080486bc      e81ffdffff     sym._init ()
+│           0x080486c1      8d8320ffffff   eax = [ebx - 0xe0]
+│           0x080486c7      29c7           edi -= eax
+│           0x080486c9      c1ff02         edi >>= 2
+│           0x080486cc      85ff           if (edi == edi
+│       ┌─< 0x080486ce      7429           isZero 0x80486f9)
+│       │   0x080486d0      31f6           esi = 0
+│       │   0x080486d2      8db600000000   esi = [esi]
+│      ┌──> 0x080486d8      8b442438       eax = dword [esp + 0x38]    ; [0x38:4]=52 ; '8'
+│      ││   0x080486dc      892c24         dword [esp] = ebp
+│      ││   0x080486df      89442408       dword [esp + 8] = eax
+│      ││   0x080486e3      8b442434       eax = dword [esp + 0x34]    ; [0x34:4]=6 ; '4'
+│      ││   0x080486e7      89442404       dword [esp + 4] = eax
+│      ││   0x080486eb      ff94b320ffff.  dword [ebx + esi*4 - 0xe0] ()
+│      ││   0x080486f2      83c601         esi += 1
+│      ││   0x080486f5      39fe           if (esi == edi
+│      └──< 0x080486f7      75df           notZero 0x80486d8)
+│       └─> 0x080486f9      83c41c         esp += 0x1c
+│           0x080486fc      5b             pop ebx
+│           0x080486fd      5e             pop esi
+│           0x080486fe      5f             pop edi
+│           0x080486ff      5d             pop ebp
+╘           0x08048700      c3
+╒ (fcn) sym.__libc_csu_fini 2
+│           ; DATA XREF from 0x080484bb (sym.__libc_csu_fini)
+╘           0x08048710      f3c3
+╒ (fcn) sym.__i686.get_pc_thunk.bx 4
+│           ; CALL XREF from 0x080486a4 (sym.__i686.get_pc_thunk.bx)
+│           0x08048712      8b1c24         ebx = dword [esp]
+╘           0x08048715      c3
+╒ (fcn) sym.__do_global_ctors_aux 42
+│           ; CALL XREF from 0x08048404 (sym.__do_global_ctors_aux)
+│           0x08048720      55             push ebp
+│           0x08048721      89e5           ebp = esp
+│           0x08048723      53             push ebx
+│           0x08048724      83ec04         esp -= 4
+│           ; DATA XREF from 0x08049f14 (sym.__do_global_ctors_aux)
+│           0x08048727      a1149f0408     eax = dword [obj.__CTOR_LIST__] ; [0x8049f14:4]=-1 LEA loc.__init_array_start ; loc.__init_array_start
+│           0x0804872c      83f8ff         if (eax == -1
+│       ┌─< 0x0804872f      7413           isZero 0x8048744)
+│       │   0x08048731      bb149f0408     ebx = obj.__CTOR_LIST__     ; loc.__init_array_start
+│       │   0x08048736      6690           
+│      ┌──> 0x08048738      83eb04         ebx -= 4
+│      ││   0x0804873b      ffd0           eax ()
+│      ││   0x0804873d      8b03           eax = dword [ebx]
+│      ││   0x0804873f      83f8ff         if (eax == -1
+│      └──< 0x08048742      75f4           notZero 0x8048738)
+│       └─> 0x08048744      83c404         esp += 4
+│           0x08048747      5b             pop ebx
+│           0x08048748      5d             pop ebp
+╘           0x08048749      c3
+            ;-- section_end..text:
+            ;-- section..fini:
+╒ (fcn) sym._fini 26
+│           ; CALL XREF from 0x08048750 (sym._fini)
+│           0x0804874c      53             push ebx                    ; [14] va=0x0804874c pa=0x0000074c sz=26 vsz=26 rwx=--r-x .fini
+│           0x0804874d      83ec08         esp -= 8
+│           0x08048750      e800000000     0x8048755 ()
+│           ; CALL XREF from 0x08048750 (sym._fini)
+│           0x08048755      5b             pop ebx
+│           0x08048756      81c39f180000   ebx += 0x189f
+│           0x0804875c      e87ffdffff     sym.__do_global_dtors_aux ()
+│           0x08048761      83c408         esp += 8
+│           0x08048764      5b             pop ebx
+╘           0x08048765      c3

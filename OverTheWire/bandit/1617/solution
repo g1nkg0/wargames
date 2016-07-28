@@ -1,0 +1,4 @@
+echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -connect localhost:31790 -ign_eof
+tmp folder -> private key
+chmod 700
+ssh bandit17@localhost -i /tmp/tmp.GTFN1eOxzv/key.private

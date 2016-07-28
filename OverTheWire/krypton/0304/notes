@@ -1,0 +1,9 @@
+python ord(char)-65 returns the value needed for computation
+
+possibilities
+    a) Brute Force
+        -> build list of keys length 6 and check against PyEnchant dictionairy
+    b) Frequency Analysis
+        -> every 6th character is (I+K)%26
+        -> quantity determines which letter I is
+        -> reverse the key somehow...
