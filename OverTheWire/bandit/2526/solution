@@ -1,0 +1,4 @@
+resize terminal window to be VERY small
+ssh bandit26@localhost -i bandit26.sshkey
+hit v to enter vi mode
+:r /etc/bandit_pass/bandit26
