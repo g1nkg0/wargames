@@ -1,10 +1,18 @@
 import sys
 import string
 
+def countnth(listofstrings, n):
+    fileout = 'count.' + str(n)
+    allnth = ''
+    for i in range(0, len(listofstrings)):
+        allnth += listofstrings[i][n]
+
+    unigram(allnth, fileout)
+
 def unigram(fileIn, fileOut):
     ret = open(fileOut, 'w')
     for char in string.uppercase:
-        ret.write(char + ' ' + str(fileIn.count(char)) + '\n')
+        ret.write(str(fileIn.count(char)).zfill(2) + ' ' + char + '\n')
 
 if len(sys.argv) >= 3:
     file1 = open(sys.argv[1], 'r')
@@ -21,18 +29,11 @@ if len(sys.argv) >= 3:
     file2 = file2[:len(file2)-1]
     print(file2)
 
-    allnth1 = ''
-    allnth2 = ''
+    for i in range(0, 6):
+        countnth(file1, i)
 
-    for c in range(0, 6):
-        for i in range(len(file1)):
-            allnth1 += file1[i][c]
-            name = 'file1.' + str(c)
-            unigram(allnth1, name)
+    for i in range(0, 6):
+        countnth(file2, i)
 
-        for i in range(len(file2)):
-            allnth2 += file2[i][c]
-            name = 'file1.' + str(c)
-            unigram(allnth2, name)
 else:
     print 'Usage: ' + sys.argv[0] + ' /path/to/file1 file2 file3'
