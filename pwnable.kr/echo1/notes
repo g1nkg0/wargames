@@ -1,0 +1,33 @@
+gdb snapshot:
+input:
+aaaabbbbccccddddeeeeffffgggghhhhiiiijjjjkkkkllllmmmmnnnnooooppppqqqqrrrrssssttttuuuuvvvvwwwwxxxxyyyyzzzzAAAABBBBCCCCDDDDEEEEFFFFGGGGHHHHIIIIJJJJKKKKLLLLMMMMNNNNOOOOPPPPQQQQRRRRSSSSTTTTUUUUVVVVWWWWXXXXYYYYZZZZ
+
+0x0000000000400848 in echo1 ()
+(gdb) i r
+rax            0x7fffffffe2d0	140737488347856
+rbx            0x0	0
+rcx            0x4444444343434342	4919131748677403458
+rdx            0x7ffff7dd3790	140737351858064
+rsi            0x6030bf	6303935
+rdi            0x7fffffffe34f	140737488347983
+rbp            0x7fffffffe2f0	0x7fffffffe2f0
+rsp            0x7fffffffe2d0	0x7fffffffe2d0
+r8             0x4646464545454544	5063812094353556804
+r9             0x7878787877777777	8680820740552357751
+r10            0x7a7a7a7a79797979	8825501086228511097
+r11            0x246	582
+r12            0x4006b0	4196016
+r13            0x7fffffffe410	140737488348176
+r14            0x0	0
+r15            0x0	0
+rip            0x400848	0x400848 <echo1+48>
+eflags         0x246	[ PF ZF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+
+----------------------
+BOF + NOP-slide + execve shellcode injection

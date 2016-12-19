@@ -1,6 +1,7 @@
 import sys
 import string
 import itertools
+import enchant
 
 def decrypt(ciphertxt, key):
     ret = ''
@@ -41,7 +42,13 @@ else:
         skeys6 += chr(((ord(cipher6[i])-69)%26)+65)
     keys = itertools.product(skeys1, skeys2, skeys3, skeys4, skeys5, skeys6)
 
+    d = enchant.Dict("en_US")
     for k in keys:
-        print(str(k) + '\n' + decrypt(infile, k) + '\n')
+        dec = decrypt(infile, k)
+        for i in range(6):
+            chk = dec[:i]
+            if d.check(chk):
+                print(str(k) + '\n' + decrypt(infile, k) + '\n')
+                continue
 
     #print(decrypt(infile, ''))

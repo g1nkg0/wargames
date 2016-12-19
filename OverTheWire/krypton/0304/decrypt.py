@@ -13,6 +13,7 @@ if (len(sys.argv) < 2):
 else:
     infile = open(sys.argv[1], 'r')
     infile = infile.read()
+    infile = infile.rstrip('\n')
 
     #keys = itertools.product('FP', 'RM', 'TE', 'KZG', 'ET', 'YM')
 
